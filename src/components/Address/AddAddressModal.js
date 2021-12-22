@@ -15,6 +15,10 @@ const AddAddressModal = ({
     setCurrentLatitude,
     currentLongitude,
     setCurrentLongitude,
+    _latitudeDelta,
+    setLatitudeDelta,
+    _longitudeDelta,
+    setLongitudeDelta,
     pin,
     setPin,
     getCurrentLocation}) => {
@@ -44,14 +48,20 @@ const AddAddressModal = ({
                         initialRegion={{
                             latitude: parseFloat(currentLatitude) ? parseFloat(currentLatitude) : 0,
                             longitude: parseFloat(currentLongitude) ? parseFloat(currentLongitude) : 0,
-                            latitudeDelta: 0.0922,
-                            longitudeDelta: 0.0421,
+                            latitudeDelta: 0.0222,
+                            longitudeDelta: 0.0121,
                         }}
                         region={{
                             latitude: parseFloat(currentLatitude) ? parseFloat(currentLatitude) : 0,
                             longitude: parseFloat(currentLongitude) ? parseFloat(currentLongitude) : 0,
-                            latitudeDelta: pin ? 0.0222 : 0.0922,
-                            longitudeDelta: pin ? 0.0121 : 0.0421
+                            latitudeDelta: _latitudeDelta ? _latitudeDelta : 0.0222,
+                            longitudeDelta: _longitudeDelta ? _longitudeDelta : 0.0121
+                        }}
+                        onRegionChangeComplete={(e)=>{
+                            setLatitudeDelta(e.latitudeDelta)
+                            setLongitudeDelta(e.longitudeDelta)
+                            setCurrentLatitude(e.latitude)
+                            setCurrentLongitude(e.longitude)
                         }}
                         onPress={(e)=>{
                             setPin({
@@ -61,8 +71,7 @@ const AddAddressModal = ({
                             setCurrentLatitude(parseFloat(e.nativeEvent.coordinate.latitude))
                             setCurrentLongitude(parseFloat(e.nativeEvent.coordinate.longitude))
                         }}
-                        provider={PROVIDER_GOOGLE}
-                
+                        // for clicking landmarks on the map
                         onPoiClick={(e)=>{
                             Toast.show(e.nativeEvent.name, Toast.SHORT, [
                                 'UIAlertController',

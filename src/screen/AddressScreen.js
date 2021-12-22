@@ -21,6 +21,8 @@ const AddressScreen = () =>{
     // api key AIzaSyBfWNTsRb7Vq-p1_bkuhQKVyjzgcbE4AXA
     const [currentLatitude, setCurrentLatitude] = useState('');
     const [currentLongitude, setCurrentLongitude] = useState('');
+    const [latitudeDelta, setLatitudeDelta] = useState('');
+    const [longitudeDelta, setLongitudeDelta] = useState('');
     const [pin, setPin] = useState('');
     const [showModal, setShowModal] = useState(false);
 
@@ -214,11 +216,15 @@ const AddressScreen = () =>{
                     setShowModal = {setShowModal}
                     currentLatitude = {currentLatitude}
                     currentLongitude = {currentLongitude}
+                    _latitudeDelta = {latitudeDelta}
+                    _longitudeDelta = {longitudeDelta}
                     pin = {pin}
                     setPin = {setPin}
                     setCurrentLatitude = {setCurrentLatitude}
                     setCurrentLongitude = {setCurrentLongitude}
                     getCurrentLocation = {getCurrentLocation}
+                    setLatitudeDelta = {setLatitudeDelta}
+                    setLongitudeDelta = {setLongitudeDelta}
                 />
             </View>
 
