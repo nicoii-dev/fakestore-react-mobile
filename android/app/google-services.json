@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "287872613962",
+    "project_id": "fakestoremobilereact",
+    "storage_bucket": "fakestoremobilereact.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:287872613962:android:42b56301bef970a7d3f0b3",
+        "android_client_info": {
+          "package_name": "com.fakestoremobilereact"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "287872613962-5dvbmpnmn772o6j48650ln99voddldlc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdzWb7FHcX6GB24RQscQcC_3eL0jClhD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "287872613962-5dvbmpnmn772o6j48650ln99voddldlc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

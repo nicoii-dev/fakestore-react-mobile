@@ -1,0 +1,7 @@
+export const FETCH_CART = 'FETCH_CART';
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
+export const ADD_ITEM_QTY = 'ADD_ITEM_QTY';
+export const SUBTRACT_ITEM_QTY = 'SUBTRACT_ITEM_QTY';
+export const SELECTED_ITEMS = 'SELECTED_ITEMS';
+export const REMOVE_ALL_ITEMS = 'REMOVE_ALL_ITEMS';
