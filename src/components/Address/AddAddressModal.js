@@ -22,7 +22,8 @@ const AddAddressModal = ({
     pin,
     setPin,
     getCurrentLocation}) => {
-
+        console.log(currentLatitude)
+        console.log(currentLongitude)
     return (
         <View>
             <Modal visible ={showModal}>
@@ -39,12 +40,14 @@ const AddAddressModal = ({
                 <View>
                     <View style={addressStyle.currentAddBtnContainer}>
                         <TouchableOpacity onPress = { () => {getCurrentLocation()}}>
-                            <IonIcons name="locate-outline" size={30} />
+                            <IonIcons name="locate" size={30} />
                         </TouchableOpacity>
                     </View>
                     <GooglePlaces />
                     <MapView 
                         style={addressStyle.map}  
+                        zoomEnabled={true}
+                        maxZoomLevel={18}
                         initialRegion={{
                             latitude: parseFloat(currentLatitude) ? parseFloat(currentLatitude) : 0,
                             longitude: parseFloat(currentLongitude) ? parseFloat(currentLongitude) : 0,
